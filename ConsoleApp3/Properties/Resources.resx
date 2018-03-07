@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="USER1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_10.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_11.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_12.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_13.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_14.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_15.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_16.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_17.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_18.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_19.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_20.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_21.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_22.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_23.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_24.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_25.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_26.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_27.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_28.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_29.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_30.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_31.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_32.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_33.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_34.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_35.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_36.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_37.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_38.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_39.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_40.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_7.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_8.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER1_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER1_9.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_10.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_11.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_12.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_13.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_14.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_15.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_16.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_17.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_18.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_19.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_20.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_21.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_22.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_23.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_24.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_25.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_26.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_27.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_28.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_29.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_30.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_31.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_32.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_33.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_34.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_35.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_36.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_37.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_38.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_39.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_40.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_7.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_8.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER2_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER2_9.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_10.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_11.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_12.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_13.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_14.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_15.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_16.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_17.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_18.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_19.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_20.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_21.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_22.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_23.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_24.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_25.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_26.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_27.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_28.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_29.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_30.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_31.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_32.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_33.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_34.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_35.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_36.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_37.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_38.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_39.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_40.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_7.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_8.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER3_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER3_9.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_10.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_11.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_12.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_13.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_14.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_15.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_16.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_17.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_18.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_19.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_20.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_21.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_22.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_23.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_24.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_25.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_26.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_27.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_28.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_29.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_30.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_31.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_32.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_33.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_34.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_35.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_36.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_37.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_38.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_39.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_40.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_7.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_8.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER4_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER4_9.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_10.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_11.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_12.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_13.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_14.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_15.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_16.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_17.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_18.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_19.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_20.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_21.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_22.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_23.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_24.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_25.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_26.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_27.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_28.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_29.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_30.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_31.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_32.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_33.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_34.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_35.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_36.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_37.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_38.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_39.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_40.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_7.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_8.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+  <data name="USER5_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\USER5_9.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1250</value>
+  </data>
+</root>
