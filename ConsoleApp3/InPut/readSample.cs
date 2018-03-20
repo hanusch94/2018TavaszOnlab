@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OnlineSignitureValidation.InPut
+namespace OnlineSignitureVerification.InPut
 {
     enum ResFileName
     {

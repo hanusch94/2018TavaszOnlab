@@ -1,41 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using StatMathLib;
-using System.Linq;
 
 namespace OnlineSignitureVerification.Testers
 {
-    /// <summary>
-    /// Math background: http://seninp.github.io/assets/pubs/senin_dtw_litreview_2008.pdf
-    /// </summary>
-    class DinamicTimeWrapping : TwoCompareTester<DinamicTimeWrapping>
+    class KolmogorovSmirnovTest : TwoCompareTester<KolmogorovSmirnovTest>
     {
-        private decimal[,] GlobalCostMatrix;
-
         protected override decimal Calculate(List<decimal> F, List<decimal> G)
         {
-            decimal normalizer = 0; //StatMathLib.Normalize.AddTheSecond.Average(F, G);
-            GlobalCostMatrix = new decimal[F.Count, G.Count];
+            decimal ret = -1;
 
-            for (int i = 1; i < F.Count; i++)
+            foreach( decimal lm in F)
             {
-                GlobalCostMatrix[i,1]=GlobalCostMatrix[i - 1, 1] + Math.Abs(F[i] + normalizer - G[1]);
-            }
-            for (int j = 1; j < G.Count; j++)
-            {
-                GlobalCostMatrix[1,j] = GlobalCostMatrix[1, j - 1] + Math.Abs(F[1] + normalizer - G[j]);
-            }
-            for (int i = 1; i < F.Count; i++)
-            {
-                for (int j = 1; j < G.Count; j++)
-                {
-                    GlobalCostMatrix[i, j] = Math.Abs(F[i] + normalizer - G[j] +
-                        Math.Min(GlobalCostMatrix[i - 1, j], Math.Min(GlobalCostMatrix[i, j - 1], GlobalCostMatrix[i - 1, j - 1])));
-                }
+                decimal tmp = Math.Abs(getDistValue(F, lm)-getDistValue(G, lm));
+                if (tmp > ret)
+                    ret = tmp;
             }
 
-            return GlobalCostMatrix[F.Count-1, G.Count-1];
+            return ret;
         }
 
         protected override double TestMethod(List<List<List<decimal>>> DataMatrix, List<decimal> testedMatrix, int ColumnId)
@@ -94,6 +76,16 @@ namespace OnlineSignitureVerification.Testers
             if (ret < 0)
                 ret = 0;
             return ret;
+        }
+
+        private decimal getDistValue(List<decimal> F, decimal x)
+        {
+            int less = 0;
+            foreach( decimal lm in F){
+                if (lm < x) less++;
+            }
+
+            return less/F.Count;
         }
     }
 }

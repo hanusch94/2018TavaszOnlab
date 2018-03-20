@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineSignitureValidation", "ConsoleApp3\OnlineSignitureValidation.csproj", "{28AC13E3-4BE1-47DF-AA7D-98BA49600732}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineSignitureVerification", "ConsoleApp3\OnlineSignitureVerification.csproj", "{28AC13E3-4BE1-47DF-AA7D-98BA49600732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatMathLib", "StatMathLib\StatMathLib.csproj", "{C542318E-2571-412D-899A-F0CFFEC0AC78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatMathLib", "StatMathLib\StatMathLib.csproj", "{C542318E-2571-412D-899A-F0CFFEC0AC78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatMathLibTest", "StatMathLibTest\StatMathLibTest.csproj", "{77C668D6-B0A8-4270-A85C-C6ED1ADF7409}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatMathLibTest", "StatMathLibTest\StatMathLibTest.csproj", "{77C668D6-B0A8-4270-A85C-C6ED1ADF7409}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
