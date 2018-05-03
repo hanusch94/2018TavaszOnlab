@@ -5,16 +5,10 @@ using System.Text;
 
 namespace OnlineSignitureVerification.InPut
 {
-    enum ResFileName
-    {
-        sample,
-        task1,
-        task2
-    }
 
     static class readSample
     {
-        private static ResFileName resFileName = ResFileName.task1;
+        public static ResFileName resFileName = Program.resFileName;
         public static List<List<List<double>>> GetTeachers(int user)
         {
             List<List<List<double>>> ret = new List<List<List<double>>>();
@@ -42,10 +36,10 @@ namespace OnlineSignitureVerification.InPut
                     path = String.Format("{0}USER{1}_{2}.txt", Program.ResPath, user, SignId);
                     break;
                 case ResFileName.task1: 
-                    path = String.Format("{0}U{1}S{2}.txt", Program.ResPath, user, SignId);
+                    path = String.Format("{0}U{1}S{2}.txt", Program.ResPath+ "task1\\", user, SignId);
                     break;
                 case ResFileName.task2:
-                    path = String.Format("{0}U{1}S{2}.txt", Program.ResPath, user, SignId);
+                    path = String.Format("{0}U{1}S{2}.txt", Program.ResPath+ "task2\\", user, SignId);
                     break;
                 default:
                     throw new NotImplementedException("Resource file's name logic");

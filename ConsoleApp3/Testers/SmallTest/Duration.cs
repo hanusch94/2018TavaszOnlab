@@ -28,8 +28,8 @@ namespace OnlineSignitureVerification.Testers.SmallTest
             int max = 0;
             foreach (int lm in teached) if (lm > max) max = lm;
 
-            if (testedMatrix.Count <= max * 0.75) ret = 0.60;
-            else if (testedMatrix.Count <= max *0.9) ret = 0.56;
+            if (testedMatrix.Count <= max * 0.75) ret = 0.75;
+            else if (testedMatrix.Count <= max *0.9) ret = 0.65;
             else if (testedMatrix.Count <= max) ret = 0.5;
             else if (testedMatrix.Count < max*1.05) ret = 0.47;
             else if (testedMatrix.Count < max * 1.3) ret = 0.3;

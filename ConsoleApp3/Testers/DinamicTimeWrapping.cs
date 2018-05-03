@@ -77,18 +77,40 @@ namespace OnlineSignitureVerification.Testers
 
                 double localMinmaxRange = localminMax[1, i] - localminMax[0, i];
 
+
+                //if (inIntervall(localMinmaxRange * 0.3, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.7)) a = -0.05;
+                //else if (inIntervall(localMinmaxRange * 0.2, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.8)) a = -0.02;
+                //else if (inIntervall(localMinmaxRange * 0.1, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.9)) a = -0.01;
+                //else if (inIntervall(localMinmaxRange, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange)) a = 0;
+                //else if (inIntervall(localMinmaxRange * -0.5, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 1.5)) a = 0.01;
+                //else if (inIntervall(localMinmaxRange * -1, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 2)) a = 0.02;
+                //else if (inIntervall(localMinmaxRange * -2, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 3)) a = 0.04;
+                //else if (inIntervall(localMinmaxRange * -3, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 5)) a = 0.07;
+                //else if (inIntervall(localMinmaxRange * -5, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 6)) a = 0.09;
+                //else if (inIntervall(localMinmaxRange * -6, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 7)) a = 0.095;
+
                 double a = 0;
-                if (inIntervall(localMinmaxRange * 0.3, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.7)) a = -0.05;
-                else if (inIntervall(localMinmaxRange * 0.2, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.8)) a = -0.02;
-                else if (inIntervall(localMinmaxRange * 0.1, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.9)) a = -0.01;
-                else if (inIntervall(localMinmaxRange, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange )) a = 0;
-                else if (inIntervall(localMinmaxRange * -0.5, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 1.5)) a = 0.01;
-                else if (inIntervall(localMinmaxRange * -1, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 2)) a = 0.02;
-                else if (inIntervall(localMinmaxRange * -2, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 3)) a = 0.04;
-                else if (inIntervall(localMinmaxRange * -3, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 5)) a = 0.07;
-                else if (inIntervall(localMinmaxRange * -5, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 6)) a = 0.09;
-                else if (inIntervall(localMinmaxRange * -6, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 7)) a = 0.095;
-                else a = 0.1;
+                if (Program.resFileName == ResFileName.task1)
+                {
+                    if (8 * localMinmaxRange < TeachedMatrix[10, i] - localminMax[0, i]) a = 0.1;
+                    else if (6 * localMinmaxRange < TeachedMatrix[10, i] - localminMax[0, i]) a = 0.08;
+                    else if (4 * localMinmaxRange < TeachedMatrix[10, i] - localminMax[0, i]) a = 0.07;
+                    else if (2 * localMinmaxRange < TeachedMatrix[10, i] - localminMax[0, i]) a = 0.06;
+                    else if (1.7 * localMinmaxRange < TeachedMatrix[10, i] - localminMax[0, i]) a = 0.04;
+                    else if (1.5 * localMinmaxRange < TeachedMatrix[10, i] - localminMax[0, i]) a = -0.05;
+                    else a = -0.1;
+                }
+                else
+                {
+                    if (4 * localminMax[0, i] < TeachedMatrix[10, i]) a = 0.03;
+                    else if (3 * localminMax[0, i] < TeachedMatrix[10, i]) a = 0.04;
+                    else if (2.5 * localminMax[0, i] < TeachedMatrix[10, i]) a = 0.05;
+                    else if (2 * localminMax[0, i] < TeachedMatrix[10, i]) a = 0.06;
+                    else if (1.5 * localminMax[0, i] < TeachedMatrix[10, i]) a = 0.07;
+                    else if (localminMax[0, i] < TeachedMatrix[10, i]) a = 0.09;
+                    //else if (0.8 * localminMax[0, i] < TeachedMatrix[10, i]) a = 0.09;
+                    else a = 0.1;
+                }
 
                 ret += a;
                 //Console.Write("eredmeny {0}\n", a);
@@ -96,12 +118,7 @@ namespace OnlineSignitureVerification.Testers
 
             if (ret < 0) ret = 0;
             if (ret > 1) ret = 1;
-            return ret*0.9+0.05;
-        }
-
-        private bool inIntervall(double min, double value, double max)
-        {
-            return min < value && value < max;
+            return ret*0.4+0.3;
         }
     }
 }

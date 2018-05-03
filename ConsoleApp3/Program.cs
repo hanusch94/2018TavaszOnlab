@@ -7,16 +7,16 @@ using StatMathLib;
 
 namespace OnlineSignitureVerification
 {
-    //TODO: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
-    //TODO: Path.Combine
-    //TODO: Get_Data_FromFile  //datának nincs értelme elnevezésben
-    //TODO: Signer, Signature.IsOriginal, Feature [,],-- StrokePoint.X,Y,P...
-    //TODO: Database<|---- Sample1, Task1, Task2
-    //TODO: Singleton helyett példányok
-    //TODO: összehasonlj
+    public enum ResFileName
+    {
+        sample,
+        task1,
+        task2
+    }
+    
     class Program
     {
-
+        public static ResFileName resFileName = ResFileName.task2;
 
         private static string resPath = Directory.GetCurrentDirectory() + @"\resources\";
         private static int userId = 5;
@@ -53,12 +53,9 @@ namespace OnlineSignitureVerification
             for (int i = 1; i <= userCount; i++)
             {
                 teacherMatrix = InPut.readSample.GetTeachers(userId);
-                
-                double[,] kstTMatrix1 = KST.Teach(teacherMatrix, 1);
-                double[,] dtwTMatrix1 = DTW.Teach(teacherMatrix, 1);
-                double[,] kstTMatrix2 = KST.Teach(teacherMatrix, 2);
-                double[,] dtwTMatrix2 = DTW.Teach(teacherMatrix, 2);
 
+                KST.Teach(teacherMatrix, 2);
+                DTW.Teach(teacherMatrix, 2);
                 D.Teach(teacherMatrix);
                 for (int j = 1; j < 31; j++)
                 {
@@ -68,15 +65,13 @@ namespace OnlineSignitureVerification
                     double bayes = 0.5;
 
                     testedMatrix = InPut.readSample.GetDataFromFile(userId, 10 + j);
-
-                    KST.Teach(kstTMatrix1);
-                    DTW.Teach(dtwTMatrix1);
+                    
                     kstRET = KST.Test(teacherMatrix, testedMatrix[2], 2);
                     dtwRET = DTW.Test(teacherMatrix, testedMatrix[2], 2);
                     durRET = D.TestMethod(testedMatrix[1]);
 
-                    KST.Teach(kstTMatrix2);
-                    DTW.Teach(dtwTMatrix2);
+                    //KST.Teach(kstTMatrix2);
+                    //DTW.Teach(dtwTMatrix2);
 
                     //kstRET = StatMathLib.LikelihoodFusion.BayesTrap(KST.Test(teacherMatrix, testedMatrix[2], 2), kstRET);
                     //dtwRET = StatMathLib.LikelihoodFusion.BayesTrap(DTW.Test(teacherMatrix, testedMatrix[2], 2), dtwRET);
