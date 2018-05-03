@@ -11,12 +11,12 @@ namespace OnlineSignitureVerification.Testers
     /// </summary>
     class DinamicTimeWrapping : TwoCompareTester<DinamicTimeWrapping>
     {
-        private decimal[,] GlobalCostMatrix;
+        private double[,] GlobalCostMatrix;
 
-        protected override decimal Calculate(List<decimal> F, List<decimal> G)
+        protected override double Calculate(List<double> F, List<double> G)
         {
-            decimal normalizer = 0; //StatMathLib.Normalize.AddTheSecond.Average(F, G);
-            GlobalCostMatrix = new decimal[F.Count, G.Count];
+            double normalizer = 0; //StatMathLib.Normalize.AddTheSecond.Average(F, G);
+            GlobalCostMatrix = new double[F.Count, G.Count];
 
             for (int i = 1; i < F.Count; i++)
             {
@@ -38,16 +38,16 @@ namespace OnlineSignitureVerification.Testers
             return GlobalCostMatrix[F.Count-1, G.Count-1];
         }
 
-        protected override double TestMethod(List<List<List<decimal>>> DataMatrix, List<decimal> testedMatrix, int ColumnId)
+        protected override double TestMethod(List<List<List<double>>> DataMatrix, List<double> testedMatrix, int ColumnId)
         {
             double ret = 0;
-            decimal[,] localminMax = new decimal[2, 10];
-            decimal globalMin = -1;
-            decimal globalMax = -1;
+            double[,] localminMax = new double[2, 10];
+            double globalMin = -1;
+            double globalMax = -1;
 
             for (int i = 0; i < DataMatrix.Count; i++)
             {
-                decimal a = Calculate(DataMatrix[i][ColumnId], testedMatrix);
+                double a = Calculate(DataMatrix[i][ColumnId], testedMatrix);
                 //Console.WriteLine(a);
                 TeachedMatrix[10, i] = a;
             }
@@ -75,25 +75,33 @@ namespace OnlineSignitureVerification.Testers
             {
                 //Console.Write("max: {0},  Calc: {1}", localminMax[1, i], TeachedMatrix[10, i]);
 
+                double localMinmaxRange = localminMax[1, i] - localminMax[0, i];
+
                 double a = 0;
-                if (2 * globalMax < TeachedMatrix[10, i])
-                    a = -0.1;
-                else if (2 * localminMax[1, i] < TeachedMatrix[10, i])
-                    a = 0;
-                else if (localminMax[1, i] < TeachedMatrix[10, i])
-                    a = 0.02;
-                else if (localminMax[1, i] + localminMax[0, i] < TeachedMatrix[10, i] * 2)
-                    a = 0.06;
-                else
-                    a = 0.1;
+                if (inIntervall(localMinmaxRange * 0.3, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.7)) a = -0.05;
+                else if (inIntervall(localMinmaxRange * 0.2, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.8)) a = -0.02;
+                else if (inIntervall(localMinmaxRange * 0.1, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 0.9)) a = -0.01;
+                else if (inIntervall(localMinmaxRange, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange )) a = 0;
+                else if (inIntervall(localMinmaxRange * -0.5, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 1.5)) a = 0.01;
+                else if (inIntervall(localMinmaxRange * -1, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 2)) a = 0.02;
+                else if (inIntervall(localMinmaxRange * -2, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 3)) a = 0.04;
+                else if (inIntervall(localMinmaxRange * -3, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 5)) a = 0.07;
+                else if (inIntervall(localMinmaxRange * -5, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 6)) a = 0.09;
+                else if (inIntervall(localMinmaxRange * -6, TeachedMatrix[10, i] - localminMax[0, i], localMinmaxRange * 7)) a = 0.095;
+                else a = 0.1;
 
                 ret += a;
                 //Console.Write("eredmeny {0}\n", a);
             }
 
-            if (ret < 0)
-                ret = 0;
-            return ret;
+            if (ret < 0) ret = 0;
+            if (ret > 1) ret = 1;
+            return ret*0.9+0.05;
+        }
+
+        private bool inIntervall(double min, double value, double max)
+        {
+            return min < value && value < max;
         }
     }
 }

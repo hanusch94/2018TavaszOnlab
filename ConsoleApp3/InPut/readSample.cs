@@ -14,10 +14,10 @@ namespace OnlineSignitureVerification.InPut
 
     static class readSample
     {
-        private static ResFileName resFileName = ResFileName.sample;
-        public static List<List<List<decimal>>> GetTeachers(int user)
+        private static ResFileName resFileName = ResFileName.task1;
+        public static List<List<List<double>>> GetTeachers(int user)
         {
-            List<List<List<decimal>>> ret = new List<List<List<decimal>>>();
+            List<List<List<double>>> ret = new List<List<List<double>>>();
 
             for (int i = 1; i <= 10; i++)
             {
@@ -27,12 +27,12 @@ namespace OnlineSignitureVerification.InPut
             return ret;
         }
 
-        public static List<List<decimal>> GetDataFromFile(int user, int SignId)
+        public static List<List<double>> GetDataFromFile(int user, int SignId)
         {
-            decimal sampling = 5;
+            double sampling = 5;
 
-            List<List<decimal>> ret = new List<List<decimal>>();
-            List<List<decimal>> dotsFromFile = new List<List<decimal>>();
+            List<List<double>> ret = new List<List<double>>();
+            List<List<double>> dotsFromFile = new List<List<double>>();
 
             string path;
 
@@ -41,7 +41,7 @@ namespace OnlineSignitureVerification.InPut
                 case ResFileName.sample:
                     path = String.Format("{0}USER{1}_{2}.txt", Program.ResPath, user, SignId);
                     break;
-                case ResFileName.task1:
+                case ResFileName.task1: 
                     path = String.Format("{0}U{1}S{2}.txt", Program.ResPath, user, SignId);
                     break;
                 case ResFileName.task2:
@@ -56,29 +56,29 @@ namespace OnlineSignitureVerification.InPut
             {
                 int rows = Int32.Parse(file.ReadLine().Trim());
 
-                dotsFromFile.Add(new List<decimal>());
-                dotsFromFile.Add(GetRowAsdecimal(file));
-                decimal norm = dotsFromFile[1][2];
-                decimal timeIter = sampling;
+                dotsFromFile.Add(new List<double>());
+                dotsFromFile.Add(GetRowAsdouble(file));
+                double norm = dotsFromFile[1][2];
+                double timeIter = sampling;
                 dotsFromFile[1][2] = 0;
 
                 for (int i = 0; i < dotsFromFile[1].Count; i++)
                 {
-                    ret.Add(new List<decimal>());
+                    ret.Add(new List<double>());
                     ret[i].Add(dotsFromFile[1][i]);
                 }
 
                 for (int i = 1; i<rows; i++)
                 {
                     dotsFromFile.RemoveAt(0);
-                    dotsFromFile.Add(GetRowAsdecimal(file));
+                    dotsFromFile.Add(GetRowAsdouble(file));
                     dotsFromFile[1][2] = dotsFromFile[1][2]-norm;
 
-                    decimal distance = dotsFromFile[1][2] - dotsFromFile[0][2];
+                    double distance = dotsFromFile[1][2] - dotsFromFile[0][2];
 
                     while(timeIter <= dotsFromFile[1][2])
                     {
-                        decimal p = (timeIter - dotsFromFile[0][2]) / distance;
+                        double p = (timeIter - dotsFromFile[0][2]) / distance;
                         
                         for (int j = 0; j < ret.Count; j++)
                         {
@@ -103,15 +103,15 @@ namespace OnlineSignitureVerification.InPut
             return ret;
         }
 
-        private static List<decimal> GetRowAsdecimal(System.IO.StreamReader file)
+        private static List<double> GetRowAsdouble(System.IO.StreamReader file)
         {
-            List<decimal> ret = new List<decimal>();
+            List<double> ret = new List<double>();
 
             string[] tmp = file.ReadLine().Trim().Split(' ');
             int j = 0;
             foreach (string lm in tmp)
             {
-                ret.Add(decimal.Parse(lm));
+                ret.Add(double.Parse(lm));
                 j++;
             }
 

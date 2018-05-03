@@ -6,13 +6,14 @@ namespace OnlineSignitureVerification.Testers
 {
     class KolmogorovSmirnovTest : TwoCompareTester<KolmogorovSmirnovTest>
     {
-        protected override decimal Calculate(List<decimal> F, List<decimal> G)
+        protected override double Calculate(List<double> F, List<double> G)
         {
-            decimal ret = -1;
+            double ret = -1;
 
-            foreach( decimal lm in F)
+            foreach( double lm in F)
             {
-                decimal tmp = Math.Abs(getDistValue(F, lm)-getDistValue(G, lm));
+                double tmp = Math.Abs(getDistValue(F, lm)-getDistValue(G, lm));
+                //Console.WriteLine(tmp);
                 if (tmp > ret)
                     ret = tmp;
             }
@@ -20,16 +21,16 @@ namespace OnlineSignitureVerification.Testers
             return ret;
         }
 
-        protected override double TestMethod(List<List<List<decimal>>> DataMatrix, List<decimal> testedMatrix, int ColumnId)
+        protected override double TestMethod(List<List<List<double>>> DataMatrix, List<double> testedMatrix, int ColumnId)
         {
             double ret = 0;
-            decimal[,] localminMax = new decimal[2, 10];
-            decimal globalMin = -1;
-            decimal globalMax = -1;
+            double[,] localminMax = new double[2, 10];
+            double globalMin = -1;
+            double globalMax = -1;
 
             for (int i = 0; i < DataMatrix.Count; i++)
             {
-                decimal a = Calculate(DataMatrix[i][ColumnId], testedMatrix);
+                double a = Calculate(DataMatrix[i][ColumnId], testedMatrix);
                 //Console.WriteLine(a);
                 TeachedMatrix[10, i] = a;
             }
@@ -58,30 +59,25 @@ namespace OnlineSignitureVerification.Testers
                 //Console.Write("max: {0},  Calc: {1}", localminMax[1, i], TeachedMatrix[10, i]);
 
                 double a = 0;
-                if (2 * globalMax < TeachedMatrix[10, i])
-                    a = -0.1;
-                else if (2 * localminMax[1, i] < TeachedMatrix[10, i])
-                    a = 0;
-                else if (localminMax[1, i] < TeachedMatrix[10, i])
-                    a = 0.02;
-                else if (localminMax[1, i] + localminMax[0, i] < TeachedMatrix[10, i] * 2)
-                    a = 0.06;
-                else
-                    a = 0.1;
+                if (4 * localminMax[1, i] < TeachedMatrix[10, i]) a = 0.015;
+                else if (4 * localminMax[1, i] < TeachedMatrix[10, i]) a = 0.03;
+                else if (3 * localminMax[1, i] < TeachedMatrix[10, i]) a = 0.09;
+                else if (2 * globalMax < TeachedMatrix[10, i])    a = 0.1;
 
                 ret += a;
                 //Console.Write("eredmeny {0}\n", a);
             }
 
-            if (ret < 0)
-                ret = 0;
+            if (ret < 0) ret = 0;
+            if (ret > 1) ret = 1;
+            ret = ret * 0.9 + 0.05;
             return ret;
         }
 
-        private decimal getDistValue(List<decimal> F, decimal x)
+        private double getDistValue(List<double> F, double x)
         {
-            int less = 0;
-            foreach( decimal lm in F){
+            double less = 0;
+            foreach( double lm in F){
                 if (lm < x) less++;
             }
 
