@@ -13,7 +13,7 @@ namespace OnlineSignitureVerification.Testers
     {
         private double[,] GlobalCostMatrix;
 
-        protected override double Calculate(List<double> F, List<double> G)
+        public override double Calculate(List<double> F, List<double> G)
         {
             double normalizer = 0; //StatMathLib.Normalize.AddTheSecond.Average(F, G);
             GlobalCostMatrix = new double[F.Count, G.Count];

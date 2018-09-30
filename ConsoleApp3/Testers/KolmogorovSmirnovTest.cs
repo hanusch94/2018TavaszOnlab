@@ -6,7 +6,7 @@ namespace OnlineSignitureVerification.Testers
 {
     class KolmogorovSmirnovTest : TwoCompareTester<KolmogorovSmirnovTest>
     {
-        protected override double Calculate(List<double> F, List<double> G)
+        public override double Calculate(List<double> F, List<double> G)
         {
             double ret = -1;
 

@@ -50,6 +50,6 @@ namespace OnlineSignitureVerification.Testers
         protected abstract double TestMethod(List<List<List<double>>> DataMatrix, List<double> testedMatrix, int ColumnId);
 
         //TODO: CalculateDistance, GetDistance 
-        protected abstract double Calculate(List<double> F, List<double> G);
+        public abstract double Calculate(List<double> F, List<double> G);
     }
 }

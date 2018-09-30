@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NPlot" Version="0.9.10" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\StatMathLib\StatMathLib.csproj" />
   </ItemGroup>
 

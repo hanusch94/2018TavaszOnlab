@@ -16,7 +16,7 @@ namespace OnlineSignitureVerification
     
     class Program
     {
-        public static ResFileName resFileName = ResFileName.task2;
+        public static ResFileName resFileName = ResFileName.task1;
 
         private static string resPath = Directory.GetCurrentDirectory() + @"\resources\";
         private static int userId = 5;
@@ -26,6 +26,47 @@ namespace OnlineSignitureVerification
         public static string SignId { get { return String.Format("{0}. userm {1}. Signiture", userId, signId); } }
 
         static void Main(string[] args)
+        {
+            //weightRun();
+            MainRun(args);
+        }
+
+        static void weightRun()
+        {
+            DinamicTimeWrapping DTW = new DinamicTimeWrapping();
+            KolmogorovSmirnovTest KST = new KolmogorovSmirnovTest();
+            Duration D = new Duration();
+
+            double[,,] dtwRes = new double[3, 1600, 40];
+            double[,,] kstRes = new double[3, 1600, 40];
+            double[,] durRes = new double[1600, 40];
+
+            for(int user = 1; user<= 40; user++)
+            {
+                for(int signId = 1; signId <= 20; signId++)
+                {
+                    List<List<double>> sign = InPut.readSample.GetDataFromFile(user, signId);
+                    for(int signId2 = 1; signId2 <= 40; signId2++)
+                    {
+                        List<List<double>> sign2 = InPut.readSample.GetDataFromFile(user, signId2);
+                        durRes[user * 40 + signId, signId2] = D.calculate(sign, sign2);
+                        for(int column=0; column<2; column++)
+                        {
+                            kstRes[user * 40 + signId, signId2, column] = KST.Calculate(sign[column], sign2[column]);
+                            dtwRes[user * 40 + signId, signId2, column] = DTW.Calculate(sign[column], sign2[column]);
+                        }
+                    }
+                }
+            }
+            
+
+            //TODO: for lm in user, sign
+                // for i in user, sign
+                    //count value for KST, DTW, Dur, PenUp
+           //TODO: PLOT
+        }
+
+        static void MainRun(string[] args)
         {
             double FINAL_maxbad = 0;
             double FINAL_mingood = 1;
@@ -42,14 +83,14 @@ namespace OnlineSignitureVerification
             double durFN = 0;
 
             List<List<List<double>>> teacherMatrix;
-            List<List<double>>  testedMatrix;
-            
+            List<List<double>> testedMatrix;
+
             DinamicTimeWrapping DTW = new DinamicTimeWrapping();
             KolmogorovSmirnovTest KST = new KolmogorovSmirnovTest();
 
             Duration D = new Duration();
 
-            
+
             for (int i = 1; i <= userCount; i++)
             {
                 teacherMatrix = InPut.readSample.GetTeachers(userId);
@@ -65,10 +106,10 @@ namespace OnlineSignitureVerification
                     double bayes = 0.5;
 
                     testedMatrix = InPut.readSample.GetDataFromFile(userId, 10 + j);
-                    
+
                     kstRET = KST.Test(teacherMatrix, testedMatrix[2], 2);
                     dtwRET = DTW.Test(teacherMatrix, testedMatrix[2], 2);
-                    durRET = D.TestMethod(testedMatrix[1]);
+                    durRET = D.TestMethod(testedMatrix);
 
                     //KST.Teach(kstTMatrix2);
                     //DTW.Teach(dtwTMatrix2);
@@ -91,22 +132,22 @@ namespace OnlineSignitureVerification
                     {
                         if (FINAL_maxbad < bayes) FINAL_maxbad = bayes;
 
-                        if (kstRET > 0.5) kstFP++;
-                        if (dtwRET > 0.5) dtwFP++;
-                        if (durRET > 0.5) durFP++;
+                        if (kstRET >= 0.5) kstFP++;
+                        if (dtwRET >= 0.5) dtwFP++;
+                        if (durRET >= 0.5) durFP++;
                         if (bayes >= 0.5) falsePozitive++;
                     }
 
-                    Console.WriteLine("U:" + i + " S:" + j + "   KST: " + kstRET + "  DTW: " + dtwRET + "  Dur: "+durRET + "   FINAL: "+bayes);
-                    if (j == 10) Console.WriteLine(); 
+                    Console.WriteLine("U:" + i + " S:" + j + "   KST: " + kstRET + "  DTW: " + dtwRET + "  Dur: " + durRET + "   FINAL: " + bayes);
+                    if (j == 10) Console.WriteLine();
                 }
 
                 Console.WriteLine("\n");
             }
 
-            Console.WriteLine("KST FN: " + kstFN /(10*userCount));
-            Console.WriteLine("KST FP: " + kstFP / (20*userCount));
-            Console.WriteLine("KST sum:  " + (2*kstFN + kstFP) / (40*userCount) +"\n");
+            Console.WriteLine("KST FN: " + kstFN / (10 * userCount));
+            Console.WriteLine("KST FP: " + kstFP / (20 * userCount));
+            Console.WriteLine("KST sum:  " + (2 * kstFN + kstFP) / (40 * userCount) + "\n");
 
             Console.WriteLine("DTW FN: " + dtwFN / (10 * userCount));
             Console.WriteLine("DTW FP: " + dtwFP / (20 * userCount));
